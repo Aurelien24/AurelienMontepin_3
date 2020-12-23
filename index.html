@@ -3,11 +3,131 @@
 	<!-- Un head type utf-8 (Universal Character Set Transformation Format - 8 bits) -->
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="style.css" />
-        <title>Reservia</title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+        <link rel="stylesheet" href=".public/css/style.css" />
+        <title>OhMyFood</title>
     </head>
     <body>
-
+        <header>
+            <img src="images/ohmyfood.png">
+        </header>
+        <div id="top">
+            <div id="top-recherche">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" name="recherche" id="recherche" maxlength="30" value="Paris, Belleville" />
+            </div>
+            <div id="top-text">
+                <h1>
+                    Réservez le menu qui vous convient
+                </h1>
+                <p>
+                    Découvrer des restorants d'exception, sélectionnées par nos soins.
+                </p>
+                <button type="button">
+                    <p>
+                        Explorer nos restorants
+                    </p>
+                </button>
+            </div>
+        </div>
+        <div id="fonctionnement">
+            <h1>
+                Fonctionnement
+            </h1>
+            <button type="button">
+                <div>
+                    <p>
+                        1
+                    </p>
+                </div>
+                <i class="fas fa-mobile-alt"></i>
+                <p>
+                    Choisissez un restaurant
+                </p>
+            </button>
+            <button type="button">
+                <div>
+                    <p>
+                        2
+                    </p>
+                </div>
+                <i class="fas fa-list-ul"></i>
+                <p>
+                    Composez votre menu
+                </p>
+            </button>
+            <button type="button">
+                <div>
+                    <p>
+                        3
+                    </p>
+                </div>
+                <i class="fas fa-store"></i>
+                <p>
+                    Dégustez au restaurant
+                </p>
+            </button>
+        </div>
+        <div id="restaurants">
+            <!-- <i class="fas fa-heart"></i> pour le coeur plein-->
+            <h1>
+                Restorants
+            </h1>
+            <div>
+                <article>
+                    <img src="images/palette.jpg">
+                    <h2>
+                        La palette du goût
+                    </h2>
+                    <p class="text">
+                        Ménilmontant
+                    </p>
+                    <i class="far fa-heart"></i>
+                    <p class="new">
+                        Nouveau
+                    </p>
+                </article>
+                <article>
+                    <img src="images/enchantee.jpg">
+                    <h2>
+                        La note enchantée
+                    </h2>
+                    <p class="text">
+                        Charonne
+                    </p>
+                    <i class="far fa-heart"></i>
+                </article>
+                <article>
+                    <img src="images/francaise.jpg">
+                    <h2>
+                        À la française
+                    </h2>
+                    <p class="text">
+                        Cité Rouge
+                    </p>
+                    <i class="far fa-heart"></i>
+                </article>
+                <article>
+                    <img src="images/delice.jpg">
+                    <h2>
+                        Le délice des sens
+                    </h2>
+                    <p class="text">
+                        Folie-Méricourt
+                    </p>
+                    <i class="far fa-heart"></i>
+                </article>
+            </div>
+        </div>
+        <footer>
+            <!-- Je ne sais pas si img ou titre a voir! -->
+            <p>
+                <a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a><br />
+                <a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a><br />
+                <a href="#">Mentions légales</a><br />
+                <a href="#">Contact</a>
+            </p>
+        </footer>
+        <script src="https://kit.fontawesome.com/d3cd4e5448.js" crossorigin="anonymous"></script>
     </body>
 </html>

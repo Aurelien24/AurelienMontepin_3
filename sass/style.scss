@@ -1,0 +1,215 @@
+@mixin display-center 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body
+{
+    margin: 0px;
+
+    header
+    {
+        height: 14vw;
+        width: 100vw;
+
+        @include display-center;
+
+        img
+        {
+            height: 7vw;
+        }
+    }
+
+    #top
+    {
+        @include display-center;
+
+        flex-direction: column;
+
+        #top-recherche{
+            background-color: grey;
+            height: 11vw;
+            width: 100vw;
+
+            @include display-center;
+
+            /*Faire une var taille*/
+            font-size: 3vw;
+
+            #recherche
+            {
+                background-color: grey;
+                border: none;
+                height: 5vw;
+                margin-left: 2vw;
+
+                /*Faire une var taille*/
+                font-size: 3vw;
+            }
+        }
+
+        #top-text
+        {
+            text-align: center;
+
+            button
+            {
+                /*mettre une var valeur : border : none;*/
+                border: none;
+                border-radius: 5vw;
+                height: 10vw;
+            }
+        }
+    }
+
+    #fonctionnement
+    {
+        @include display-center;
+
+        flex-direction: column;
+
+        button
+        {
+            border-radius: 3vw;
+            border: none;
+            width: 89vw;
+            height: 12vw;
+            margin-top: 2vw;
+            padding: 0px;
+
+            display: grid;
+            grid-template-columns: 5vw 5vw 79vw;
+            grid-template-rows: auto;
+
+            div
+            {
+                grid-column: 1;
+                align-self: center;
+                border-radius: 100%;
+                background-color: blue;
+                
+                /*Seras calculé avec la taille de police*/
+                height: calc(5vw);
+                /* =height */
+                width: calc(5vw);
+                /* =height/2 */
+                margin-left: calc(-2.5vw);
+            }
+
+            i
+            {
+                grid-column: 2;
+                align-self: center;
+            }
+
+            p
+            {
+                grid-column: 3;
+                align-self: center;
+            }
+        }
+    }
+
+    #restaurants
+    {
+        @include display-center;
+
+        flex-direction: column;
+        background-color: whitesmoke;
+
+        /*mettre en var???*/
+        margin-top: 5vw;
+        
+        div
+        {
+
+            margin-bottom: 5vw;
+
+            article
+            {
+                display: grid;
+                grid-template-columns: 65vw 24vw ;
+                grid-template-rows: 15vw 32vw 10vw 10vw;
+
+                /*Faire une var pour border-radius 3.5vw*/
+                border-radius: 3.5vw;
+
+                background-color: white;
+                margin-top: 5vw;
+
+                /*faire une var? - changement de couleur*/
+                box-shadow: 1px 1px 4vw #bfbfbf;
+
+                img
+                {
+                    width: 89vw;
+                    height: 47vw;
+                    border-radius: 3.5vw 3.5vw 0vw 0vw;
+                    object-fit: cover;
+                    grid-column: 1 / 2;
+                    grid-row: 1 / 2;
+                }
+
+                h2
+                {
+                    grid-column: 1;
+                    grid-row: 3;
+                    align-self: center;
+                    margin-left: 3vw;
+                }
+
+                .text
+                {
+                    grid-column: 1;
+                    grid-row: 4;
+                    align-self: center;
+                    margin-left: 3vw;
+                }
+
+                i
+                {
+                    grid-column: 2;
+                    /*Pourquoi 5??? Bug? Mauvaise compréansion de grid? (5 pour le trais? )*/
+                    grid-row: 3/5;
+                    align-self: center;
+                    justify-self: center;
+                }
+
+                .new
+                {
+                    grid-column: 2;
+                    grid-row: 1;
+                    background-color: green;
+                    align-self: center;
+                    height: 5vw;
+                    margin-right: 3vw;
+                    text-align: center;
+                }
+            } 
+        }
+    }
+
+    footer
+    {
+        background-color: grey;
+        padding: 7vw;
+
+        p
+        {
+            color: white;
+
+            /*a suppr   a l'avenir*/
+            margin: 0px;
+
+            a
+            {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+
