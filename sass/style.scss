@@ -5,6 +5,26 @@
     justify-content: center;
 }
 
+$font-size1: 7vw;
+$font-size2: 5.2vw;
+$font-size3: 4.3vw;
+
+/*gris clair*/
+$color1: #EAEAEA;
+/*gris très clair*/
+$color2: #F6F6F6;
+/*violet*/
+$color3: #9356DC;
+/*vert claire*/
+$color4: #99E2D0;
+/*vert foncé*/
+$color5: #54B9A0;
+/*presque noir*/
+$color6: #353535;
+/*Rose*/
+$color7: #FF79DA;
+
+
 body
 {
     margin: 0px;
@@ -29,37 +49,60 @@ body
         flex-direction: column;
 
         #top-recherche{
-            background-color: grey;
+            background-color: $color1;
             height: 11vw;
             width: 100vw;
 
             @include display-center;
 
             /*Faire une var taille*/
-            font-size: 3vw;
+            font-size: $font-size2;
 
             #recherche
             {
-                background-color: grey;
+                background-color: $color1;
                 border: none;
                 height: 5vw;
                 margin-left: 2vw;
 
-                /*Faire une var taille*/
-                font-size: 3vw;
+                font-size: $font-size3;
             }
         }
 
         #top-text
         {
             text-align: center;
+            background-color: $color2;
+
+            /*Faire une var pour ?*/
+            padding-bottom: 14vw;
+
+            h1
+            {
+                font-size: $font-size1;
+            }
+
+            p
+            {
+                font-size: $font-size2;
+            }
 
             button
             {
+
                 /*mettre une var valeur : border : none;*/
                 border: none;
                 border-radius: 5vw;
                 height: 10vw;
+                font-size: $font-size3;
+                background: linear-gradient(355deg, $color3, $color7);
+                
+
+                p
+                {
+                    margin: 0px;
+                    color: white;
+                }
             }
         }
     }
@@ -70,14 +113,28 @@ body
 
         flex-direction: column;
 
+        /*Faire une var pour ?*/
+        padding-top: 14vw;
+
+        h2
+        {
+            font-size: $font-size1;
+
+            /*Var margin: 0px oblige ou mise en 1 seul ligne de tous !*/
+            margin: 0px;
+
+            width: 90vw;
+        }
+
         button
         {
             border-radius: 3vw;
             border: none;
-            width: 89vw;
+            width: 84vw;
             height: 12vw;
             margin-top: 2vw;
             padding: 0px;
+            background-color: $color2;
 
             display: grid;
             grid-template-columns: 5vw 5vw 79vw;
@@ -87,20 +144,25 @@ body
             {
                 grid-column: 1;
                 align-self: center;
-                border-radius: 100%;
-                background-color: blue;
                 
-                /*Seras calculé avec la taille de police*/
-                height: calc(5vw);
-                /* =height */
-                width: calc(5vw);
-                /* =height/2 */
-                margin-left: calc(-2.5vw);
+                border-radius: 100%;
+                background-color: $color3;
+                
+                /*Seras calculé avec la taille de police. Pas de var en calc ?*/
+                height: calc(4.3vw + 1vw);
+                width: calc(4.3vw + 1vw);
+                margin-left: calc((-4.3vw - 1vw) / 2);
+
+                p
+                {
+                    margin: 0px;
+                }
             }
 
             i
             {
                 grid-column: 2;
+                text-align: center;
                 align-self: center;
             }
 
@@ -108,6 +170,12 @@ body
             {
                 grid-column: 3;
                 align-self: center;
+                margin: 0px;
+            }
+
+            i, p, div > p
+            {
+                font-size: $font-size3;
             }
         }
     }
@@ -117,10 +185,16 @@ body
         @include display-center;
 
         flex-direction: column;
-        background-color: whitesmoke;
+        background-color: $color2;
 
         /*mettre en var???*/
         margin-top: 5vw;
+
+        h2
+        {
+            font-size: $font-size1;
+            width: 90vw;
+        }
         
         div
         {
@@ -147,9 +221,26 @@ body
                     width: 89vw;
                     height: 47vw;
                     border-radius: 3.5vw 3.5vw 0vw 0vw;
+
                     object-fit: cover;
+
                     grid-column: 1 / 2;
                     grid-row: 1 / 2;
+                }
+
+                .position-1
+                {
+                    object-position: 50% 110%;
+                }
+
+                .position-2
+                {
+                    object-position: 50% 60%;
+                }
+
+                .position-3
+                {
+                    object-position: 50% 120%;
                 }
 
                 h2
@@ -158,6 +249,7 @@ body
                     grid-row: 3;
                     align-self: center;
                     margin-left: 3vw;
+                    font-size:  $font-size2;
                 }
 
                 .text
@@ -166,6 +258,7 @@ body
                     grid-row: 4;
                     align-self: center;
                     margin-left: 3vw;
+                    font-size:  $font-size2;
                 }
 
                 i
@@ -175,17 +268,42 @@ body
                     grid-row: 3/5;
                     align-self: center;
                     justify-self: center;
+                    font-size:  $font-size1;
+                    display: inline;
+                    color: $color3;
+                    visibility: hidden;
+
+                    &.far
+                    {
+                        visibility: visible;
+                    
+                        &:active
+                        {
+                            &.far
+                            {
+                                visibility: hidden;
+                            }
+
+                            .fas
+                            {
+                                visibility: visible;
+                            }
+                        }
+                    }
                 }
 
                 .new
                 {
                     grid-column: 2;
                     grid-row: 1;
-                    background-color: green;
-                    align-self: center;
-                    height: 5vw;
+                    background-color: $color4;
+                    height: 7vw;
                     margin-right: 3vw;
-                    text-align: center;
+                    font-size:  $font-size3;
+                    color: $color5;
+                    border-radius: 0.5vw;
+
+                    @include display-center;
                 }
             } 
         }
@@ -193,7 +311,7 @@ body
 
     footer
     {
-        background-color: grey;
+        background-color: $color6;
         padding: 7vw;
 
         p
@@ -203,13 +321,22 @@ body
             /*a suppr   a l'avenir*/
             margin: 0px;
 
+            font-size:  $font-size3;
+
             a
             {
                 text-decoration: none;
                 color: white;
             }
+
+            i
+            {
+                font-size: $font-size3;
+
+
+                /*height: $font-size3;
+                width: $font-size3;*/
+            }
         }
     }
 }
-
-

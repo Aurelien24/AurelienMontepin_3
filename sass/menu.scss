@@ -1,0 +1,58 @@
+.img-menu
+{
+
+    background-image: url(../../images/francaise.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 70vw;
+
+    display: flex;
+    flex-direction: column-reverse;
+    
+
+    div
+    {
+        background-color: whitesmoke;
+        border-radius: 10vw 10vw 0vw 0vw;
+        padding: 0vw 10vw 0vw 10vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.carte
+{
+    background-color: whitesmoke;
+    padding: 0px 5.5vw 0px 5.5vw;
+    display: flex;
+    flex-direction: column;
+
+    div
+    {
+        background-color: white;
+        border-radius: 3vw;
+        padding: 0vw 3vw 0vw 3vw;
+
+        div
+        {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px;
+        }
+    }
+
+    button
+    {
+        align-self: center;
+        border: none;
+        border-radius: 5vw;
+        height: 10vw;
+        /*
+        font-size: $font-size3;
+        background: linear-gradient(355deg, $color3, $color7);
+        */
+    }
+}
