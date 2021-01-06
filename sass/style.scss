@@ -1,46 +1,11 @@
-@mixin display-center 
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-$font-size1: 7vw;
-$font-size2: 5.2vw;
-$font-size3: 4.3vw;
-
-/*gris clair*/
-$color1: #EAEAEA;
-/*gris très clair*/
-$color2: #F6F6F6;
-/*violet*/
-$color3: #9356DC;
-/*vert claire*/
-$color4: #99E2D0;
-/*vert foncé*/
-$color5: #54B9A0;
-/*presque noir*/
-$color6: #353535;
-/*Rose*/
-$color7: #FF79DA;
+@import "variable.scss";
+@import "header-footer.scss";
+@import "base.scss";
 
 
 body
 {
     margin: 0px;
-
-    header
-    {
-        height: 14vw;
-        width: 100vw;
-
-        @include display-center;
-
-        img
-        {
-            height: 7vw;
-        }
-    }
 
     #top
     {
@@ -271,23 +236,19 @@ body
                     font-size:  $font-size1;
                     display: inline;
                     color: $color3;
-                    visibility: hidden;
 
-                    &.far
+                    /* au survol le replir :hover faire apparaitre le .fas */
+                    &.fas
                     {
-                        visibility: visible;
+                        opacity: 0;
+                        transition-property: opacity;
+                        transition-duration: 1000ms;
                     
-                        &:active
+                        &:hover
                         {
-                            &.far
-                            {
-                                visibility: hidden;
-                            }
 
-                            .fas
-                            {
-                                visibility: visible;
-                            }
+                            opacity: 1;
+
                         }
                     }
                 }
@@ -306,37 +267,6 @@ body
                     @include display-center;
                 }
             } 
-        }
-    }
-
-    footer
-    {
-        background-color: $color6;
-        padding: 7vw;
-
-        p
-        {
-            color: white;
-
-            /*a suppr   a l'avenir*/
-            margin: 0px;
-
-            font-size:  $font-size3;
-
-            a
-            {
-                text-decoration: none;
-                color: white;
-            }
-
-            i
-            {
-                font-size: $font-size3;
-
-
-                /*height: $font-size3;
-                width: $font-size3;*/
-            }
         }
     }
 }

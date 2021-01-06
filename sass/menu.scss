@@ -1,3 +1,13 @@
+@import "variable.scss";
+@import "header-footer.scss";
+@import "base.scss";
+
+/*a mettre dans le base*/
+body
+{
+    margin: 0px;
+}
+
 .img-menu
 {
 
@@ -14,45 +24,257 @@
 
     div
     {
-        background-color: whitesmoke;
+        background-color: $color2;
         border-radius: 10vw 10vw 0vw 0vw;
         padding: 0vw 10vw 0vw 10vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 75vw 10vw;
+        grid-template-rows: auto;
+
+        h1
+        {
+            font-size: $font-size1;
+            grid-column: 1;
+            grid-row: 1;
+        }
+        
+        i
+        {
+            font-size: $font-size1;
+            grid-column: 2;
+            grid-row: 1;
+
+            align-self: center;
+            justify-self: center;
+            color: $color3;
+
+            &.fas
+            {
+                opacity: 0;
+                transition-property: opacity;
+                transition-duration: 1000ms;
+                    
+                &:hover
+                {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
 
+/* Faire une classe pour le menu d'arrivé lancer un transphorm */
+
 .carte
 {
-    background-color: whitesmoke;
+    background-color: $color2;
     padding: 0px 5.5vw 0px 5.5vw;
     display: flex;
     flex-direction: column;
 
-    div
+    h2
+    {
+        font-size: $font-size2;
+        font-weight: normal;
+    }
+
+    .food
     {
         background-color: white;
         border-radius: 3vw;
         padding: 0vw 3vw 0vw 3vw;
+        
+        overflow: hidden;
 
-        div
+        display: grid;
+        grid-template-columns: 84.5vw 14.5vw;
+        grid-template-rows: 8vw 8vw;
+
+        transition-property: grid-template-columns;
+        transition-duration: 1000ms;
+
+
+        h3
+        {
+            font-size: $font-size3;
+            margin-bottom: 0px;
+            margin-top: 2.5vw;
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .contenu
         {
             display: flex;
             justify-content: space-between;
             padding: 0px;
+            font-size: $font-size3;
+            margin-top: 0.5vw;
+
+            grid-column: 1;
+            grid-row: 2;
+
+            p
+            {
+                margin: 0px;
+            }
+        }
+
+        .check
+        {
+            grid-column: 2;
+            grid-row: 1/3;
+            
+            background-color: $color5;
+
+            justify-self: center;
+            align-self: center;
+
+            height: 100%;
+            width: 100%;
+            border-radius: 0vw 3vw 3vw 0vw;
+            margin-right: -3vw;
+            text-align: center;
+
+            i
+            {
+                font-size: 6vw;
+                margin-top: 5vw;
+                color: white;
+
+                transform: rotate(0deg);
+                transition-property: transform;
+                transition-duration: 1000ms;
+
+                &:hover
+                {
+                    transform: rotate(-360deg);
+                }
+            }
+        }
+
+        &:hover
+        {
+            grid-template-columns: 70vw 14.5vw;
+
+            /* Ne fonctionne pas. Faire un réglave avec Keyframe?
+
+            .check
+            {
+                i
+                {
+                    &:hover + i
+                    {
+                        transform: rotate(-360deg);
+                    }
+                }
+            }
+
+            */
         }
     }
+
+    .food1/*::before*/
+    {
+        opacity: 0;
+        margin: 5vw 0vw 5vw 0vw;
+        animation-name: food;
+
+        /*Triche temporaire pour maintenir l'êtas*/
+        animation-duration: 1000s;
+    }
+
+    /* Tentative :before :after (after kefram donc) Mauvais réglage
+    .food1::after
+    {
+        opacity: 1;
+        margin: 3vw 0vw 3vw 0vw;
+    }    */
+
+    .food2
+    {
+        opacity: 0;
+        margin: 5vw 0vw 5vw 0vw;
+        animation-name: food;
+        animation-duration: 1200s;
+
+       /* Vieux coup avec pseudo classe. Innutil?
+       
+       &:hover
+        {
+            opacity: 1;
+            margin: 3vw 0vw 3vw 0vw;
+        }*/
+    }
+
+    .food3
+    {
+        opacity: 0;
+        margin: 5vw 0vw 5vw 0vw;
+        /*transition-property: all;
+        transition-duration: 1000ms;*/
+
+        animation-name: food;
+        animation-duration: 1400s;
+
+        /*&:hover
+        {
+            opacity: 1;
+            margin: 3vw 0vw 3vw 0vw;
+        }*/
+    }
+
+    /* Tentative de Keyframes, JS ?*/
+    @keyframes food{
+        from{
+            opacity: 0;
+            margin: 5vw 0vw 5vw 0vw;
+            
+        }
+        0.1%{
+            opacity: 1;
+            margin: 3vw 0vw 3vw 0vw;
+        }
+        to{
+            opacity: 1;
+            margin: 3vw 0vw 3vw 0vw;
+        }
+    }
+
+    
 
     button
     {
         align-self: center;
         border: none;
-        border-radius: 5vw;
-        height: 10vw;
-        /*
+        border-radius: 6vw;
+        height: 12vw;
+
+        margin-top: 7vw;
+        margin-bottom: 13vw;
+
+        padding: 0vw 8vw 0vw 8vw;
+        box-shadow: 5px 5px 5px 10px grey;
+
+        /*Un fony size4 ?*/
         font-size: $font-size3;
         background: linear-gradient(355deg, $color3, $color7);
-        */
+
+        transition-property: background, box-shadow;
+
+        /*Pas de progressif ? Pk? */
+        transition-duration: 1000ms;
+
+            &:hover
+            {
+                background: linear-gradient(355deg, $color2, $color6);
+                box-shadow: 5px 5px 5px 10px black;
+            }
+
+            p
+            {
+                margin: 0px;
+                color: white;
+            }
     }
 }

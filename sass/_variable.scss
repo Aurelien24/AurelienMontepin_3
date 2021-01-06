@@ -1,0 +1,25 @@
+@mixin display-center 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+$font-size1: 7vw;
+$font-size2: 5.2vw;
+$font-size3: 4.3vw;
+
+/*gris clair*/
+$color1: #EAEAEA;
+/*gris très clair*/
+$color2: #F6F6F6;
+/*violet*/
+$color3: #9356DC;
+/*vert claire*/
+$color4: #99E2D0;
+/*vert foncé*/
+$color5: #54B9A0;
+/*presque noir*/
+$color6: #353535;
+/*Rose*/
+$color7: #FF79DA;
