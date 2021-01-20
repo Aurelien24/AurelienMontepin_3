@@ -102,6 +102,10 @@ body
         transition-property: grid-template-columns;
         transition-duration: 1000ms;
 
+        opacity: 1;
+        margin: 3vw 0vw 3vw 0vw;
+        animation-name: food;
+
 
         h3
         {
@@ -154,12 +158,6 @@ body
                 transform: rotate(0deg);
                 transition-property: transform;
                 transition-duration: 1000ms;
-
-                
-                &:hover
-                {
-                    transform: rotate(-360deg);
-                }
             }
         }
 
@@ -167,57 +165,30 @@ body
         {
             grid-template-columns: 70vw 14.5vw;
 
-           /* i
+            i
             {
-                transform: rotate(0deg);
-                transition-property: transform;
-                transition-duration: 1000ms;
-
-                :hover > i
-                {
-                    transform: rotate(-360deg);
-                    /*
-                    i
-                    {
-                        &:hover + i
-                        {
-                            
-                        }
-                    }
-                }
-            }*/
+                transform: rotate(360deg);
+            }
         }
     }
 
-    .food1/*::before*/
+    .food1
     {
-        opacity: 1;
-        margin: 3vw 0vw 3vw 0vw;
-        animation-name: food;
         animation-duration: 1s;
     }
 
     .food2
     {
-        opacity: 1;
-        margin: 3vw 0vw 3vw 0vw;
-        animation-name: food;
         animation-duration: 1.2s;
     }
 
     .food3
     {
-        opacity: 1;
-        margin: 3vw 0vw 3vw 0vw;
-        animation-name: food;
         animation-duration: 1.4s;
     }
 
     .food4
     {
-        opacity: 1;
-        margin: 3vw 0vw 3vw 0vw;
-        animation-name: food;
         animation-duration: 1.6s;
     }
 
@@ -225,7 +196,6 @@ body
         from{
             opacity: 1;
             margin: 3vw 0vw 3vw 0vw;
-            
         }
         0.1%{
             opacity: 0;

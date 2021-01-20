@@ -23,3 +23,53 @@ p, h2, h3, h4, h5, h6
 {
     font-family: 'Roboto';
 }
+
+@media screen and (max-width: 1071px)
+{
+
+    h1
+    {
+        font-size: $font-size1;
+    }
+
+    h3
+    {
+        font-size: $font-size3;
+    }
+
+    p
+    {
+        font-size: $font-size2;
+    }
+
+}
+@media screen and (min-width: 1072px)
+{
+
+    h1
+    {
+        font-size: 24px;
+    }
+
+    h3
+    {
+        font-size: 20px;
+    }
+
+    p
+    {
+        font-size: 16px;
+    }
+
+}
+
+body
+{
+    margin: 0px;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
