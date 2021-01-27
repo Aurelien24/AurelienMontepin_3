@@ -1,3 +1,5 @@
+/* police */
+
 @font-face
 {
     font-family: 'Shrikhand';
@@ -22,6 +24,90 @@ h1 /*, h2, h3, h4, h5, h6*/
 p, h2, h3, h4, h5, h6
 {
     font-family: 'Roboto';
+}
+
+/* Annimation */
+
+.fa-heart
+{
+    font-size: $font-size1;
+
+    align-self: center;
+    justify-self: center;
+
+    &.fas
+    {
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 1000ms;
+            
+        &:hover
+        {
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes food{
+    from{
+        opacity: 1;
+        margin: 1.5vw 0vw 1.5vw 0vw;
+    }
+    0.1%{
+        opacity: 0;
+        margin: 5vw 0vw 5vw 0vw;
+    }
+    to{
+        opacity: 1;
+        margin: 1.5vw 0vw 1.5vw 0vw;
+    }
+}
+
+.food1
+{
+    animation-duration: 1s;
+}
+
+.food2
+{
+    animation-duration: 1.2s;
+}
+
+.food3
+{
+    animation-duration: 1.4s;
+}
+
+.food4
+{
+    animation-duration: 1.6s;
+}
+
+/* Taille police */
+
+.fa-heart
+{
+    font-size: $font-size1;
+}
+
+#top-recherche
+{
+    font-size: $font-size2;
+
+    #recherche
+    {
+        font-size: $font-size3;
+    }
+}
+
+button
+{
+    font-size: $font-size3;
+}
+
+h2
+{
+    font-size: $font-size2;
 }
 
 @media screen and (max-width: 1071px)
@@ -63,6 +149,8 @@ p, h2, h3, h4, h5, h6
 
 }
 
+/* Autre base constante */
+
 body
 {
     margin: 0px;
@@ -72,4 +160,243 @@ a
 {
     text-decoration: none;
     color: black;
+}
+
+p
+{
+    margin: 0px;
+}
+
+.check > i
+{
+    color: white;
+    transform: rotate(0deg);
+    transition-property: transform;
+    transition-duration: 1000ms;
+}
+
+#top
+{
+    @include display-center;
+    flex-direction: column;
+}
+
+#top-recherche
+{
+    background-color: $color1;
+    @include display-center;
+
+    #recherche
+    {
+        background-color: $color1;
+        border: none;
+    }
+}
+
+#top-text
+{
+    text-align: center;
+    background-color: $color2;
+}
+
+.button-color
+{
+    align-self: center;
+    border: none;
+    background: linear-gradient(355deg, $color3, $color7);
+    opacity: 1;
+    box-shadow: 1px 1px 5px 3px grey;
+    font-size: $font-size3;
+
+    transition-property: opacity, box-shadow;
+    transition-duration: 1000ms;
+
+    &:hover
+    {
+        opacity: 0.90;
+        box-shadow: 1px 1px 5px 3px black;
+    }
+    
+    p
+    {
+        color: white;
+    }
+}
+
+#fonctionnement
+{
+    @include display-center;
+    flex-direction: column;
+
+    h2
+    {
+        margin: 0px;
+    }
+
+    .button-fonctionnement
+    {
+        border-radius: 3vw;
+        border: none;
+        padding: 0px;
+        background-color: $color2;
+        display: grid;
+        grid-template-rows: auto;
+
+        .button-grey-div
+        {
+            grid-column: 1;
+            align-self: center;
+            
+            border-radius: 100%;
+            background-color: $color3;
+        }
+
+        i
+        {
+            grid-column: 2;
+            text-align: center;
+            align-self: center;
+        }
+
+        p
+        {
+            grid-column: 3;
+            align-self: center;
+            margin: 0px;
+        }
+    }
+}
+
+#restaurants
+{
+    @include display-center;
+
+    flex-direction: column;
+    background-color: $color2;
+
+    div > a > article
+    {
+        display: grid;
+        background-color: white;
+        box-shadow: 1px 1px 4vw #bfbfbf;
+
+        img
+        {
+            object-fit: cover;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .position-1
+        {
+            object-position: 50% 110%;
+        }
+
+        .position-2
+        {
+            object-position: 50% 60%;
+        }
+
+        .position-3
+        {
+            object-position: 50% 120%;
+        }
+
+        h2
+        {
+            grid-column: 1;
+            grid-row: 3;
+            align-self: center;
+            margin-left: 3vw;
+            font-size:  $font-size2;
+        }
+
+        .text
+        {
+            grid-column: 1;
+            grid-row: 4;
+            align-self: center;
+            margin-left: 3vw;
+            font-size:  $font-size2;
+        }
+
+        i
+        {
+            grid-column: 2;
+            /*Pourquoi 5??? Bug? Mauvaise compréansion de grid? (5 pour le trais? )*/
+            grid-row: 3/5;
+            align-self: center;
+            justify-self: center;
+            font-size:  $font-size1;
+            display: inline;
+            color: $color3;
+
+            /* au survol le replir :hover faire apparaitre le .fas */
+            &.fas
+            {
+                opacity: 0;
+                transition-property: opacity;
+                transition-duration: 1000ms;
+            
+                &:hover
+                {
+
+                    opacity: 1;
+
+                }
+            }
+        }
+
+        .new
+        {
+            grid-column: 2;
+            grid-row: 1;
+            background-color: $color4;
+            height: 7vw;
+            margin-right: 3vw;
+            font-size:  $font-size3;
+            color: $color5;
+            border-radius: 0.5vw;
+
+            @include display-center;
+        }
+    }
+}
+
+.img-menu
+{
+
+    background-image: url(../../images/francaise.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    display: flex;
+    flex-direction: column-reverse;
+
+    div
+    {
+        background-color: $color2;
+        display: grid;
+        grid-template-rows: auto;
+
+        h1
+        {
+            font-size: $font-size1;
+            grid-column: 1;
+            grid-row: 1;
+            text-align: center;
+        }
+        
+        i
+        {
+            grid-column: 2;
+            grid-row: 1;
+            color: $color3;
+        }
+    }
+}
+
+.carte
+{
+    
 }
