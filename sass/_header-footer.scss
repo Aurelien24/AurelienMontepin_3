@@ -1,7 +1,6 @@
 header
     {
         height: 14vw;
-        width: 100vw;
 
         @include display-center;
 
@@ -12,22 +11,20 @@ header
     }
 
 footer
+/* logo */
     {
         background-color: $color6;
-        padding: 7vw;
+        width: 100vw;
 
         p
         {
-            color: white;
-
             /*a suppr   a l'avenir*/
-            margin: 0px;
+            margin: 10vw;
 
             font-size:  $font-size3;
 
             a
             {
-                text-decoration: none;
                 color: white;
             }
 

@@ -154,6 +154,11 @@ h2
 body
 {
     margin: 0px;
+
+    /*Problème vient de là ? Voir si ce serais pas les vw de code ? */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a
@@ -244,23 +249,25 @@ p
 
         .button-grey-div
         {
-            grid-column: 1;
             align-self: center;
             
             border-radius: 100%;
             background-color: $color3;
+
+            .number
+            {
+                color: white;
+            }
         }
 
         i
         {
-            grid-column: 2;
             text-align: center;
             align-self: center;
         }
 
         p
         {
-            grid-column: 3;
             align-self: center;
             margin: 0px;
         }
@@ -359,6 +366,8 @@ p
             border-radius: 0.5vw;
 
             @include display-center;
+            align-self: center;
+            justify-self: center;
         }
     }
 }
@@ -369,7 +378,7 @@ p
     background-image: url(../../images/francaise.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
+    width: 100vw; /*99.1vw sur pc pourquoi ???*/
     display: flex;
     flex-direction: column-reverse;
 
@@ -396,7 +405,7 @@ p
     }
 }
 
-.carte
+/*.carte
 {
     
-}
+}*/
