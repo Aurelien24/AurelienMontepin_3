@@ -5,9 +5,7 @@
     justify-content: center;
 }
 
-$font-size1: 7vw;
-$font-size2: 5.2vw;
-$font-size3: 4.3vw;
+/*J'avais voulut mettre le font-seiz en variable mais les variables ne sont pas compatible avec les média query*/
 
 /*gris clair*/
 $color1: #EAEAEA;

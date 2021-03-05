@@ -26,12 +26,61 @@ p, h2, h3, h4, h5, h6
     font-family: 'Roboto';
 }
 
+.fa-heart, i, h1
+{
+    font-size: 7vw;
+}
+
+#top-recherche, h2, .text, button, #top-text > p
+{
+    font-size: 5.2vw;
+}
+
+#recherche, .new, footer > p, footer > p > i, h3, .contenu
+{
+    font-size: 4.3vw;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1071px)
+{
+    .fa-heart, i, h1
+    {
+        font-size: 6.5vw;
+    }
+    
+    #top-recherche, h2, .text,  button, #top-text > p
+    {
+        font-size: 3.6vw;
+    }
+    
+    #recherche, .new, footer > p, footer > p > a > i, h3, .contenu
+    {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 1072px)
+{
+    .fa-heart, i, h1
+    {
+        font-size: 5.5vw;
+    }
+    
+    #top-recherche, h2, .text, button, #top-text > p
+    {
+        font-size: 3.5vw;
+    }
+    
+    #recherche, .new, footer > p, footer > p > i, h3, .contenu
+    {
+        font-size: 2.5vw;
+    }
+}
+
 /* Annimation */
 
 .fa-heart
 {
-    font-size: $font-size1;
-
     align-self: center;
     justify-self: center;
 
@@ -85,69 +134,12 @@ p, h2, h3, h4, h5, h6
 
 /* Taille police */
 
-.fa-heart
-{
-    font-size: $font-size1;
-}
 
-#top-recherche
-{
-    font-size: $font-size2;
 
-    #recherche
-    {
-        font-size: $font-size3;
-    }
-}
 
-button
-{
-    font-size: $font-size3;
-}
 
-h2
-{
-    font-size: $font-size2;
-}
+    
 
-@media screen and (max-width: 1071px)
-{
-
-    h1
-    {
-        font-size: $font-size1;
-    }
-
-    h3
-    {
-        font-size: $font-size3;
-    }
-
-    p
-    {
-        font-size: $font-size2;
-    }
-
-}
-@media screen and (min-width: 1072px)
-{
-
-    h1
-    {
-        font-size: 24px;
-    }
-
-    h3
-    {
-        font-size: 20px;
-    }
-
-    p
-    {
-        font-size: 16px;
-    }
-
-}
 
 /* Autre base constante */
 
@@ -211,7 +203,10 @@ p
     background: linear-gradient(355deg, $color3, $color7);
     opacity: 1;
     box-shadow: 1px 1px 5px 3px grey;
-    font-size: $font-size3;
+
+    border-radius: 5vw;
+    height: 10vw;
+    padding: 0vw 4vw 0vw 4vw;
 
     transition-property: opacity, box-shadow;
     transition-duration: 1000ms;
@@ -269,7 +264,6 @@ p
         p
         {
             align-self: center;
-            margin: 0px;
         }
     }
 }
@@ -315,7 +309,6 @@ p
             grid-row: 3;
             align-self: center;
             margin-left: 3vw;
-            font-size:  $font-size2;
         }
 
         .text
@@ -324,7 +317,6 @@ p
             grid-row: 4;
             align-self: center;
             margin-left: 3vw;
-            font-size:  $font-size2;
         }
 
         i
@@ -334,7 +326,6 @@ p
             grid-row: 3/5;
             align-self: center;
             justify-self: center;
-            font-size:  $font-size1;
             display: inline;
             color: $color3;
 
@@ -361,7 +352,7 @@ p
             background-color: $color4;
             height: 7vw;
             margin-right: 3vw;
-            font-size:  $font-size3;
+            margin-top: 3vw;
             color: $color5;
             border-radius: 0.5vw;
 
@@ -372,10 +363,28 @@ p
     }
 }
 
+#a-la-francaise
+{
+    background-image: url(../../images/francaise.jpg);
+}
+
+#la-note-enchantee
+{
+    background-image: url(../../images/enchantee.jpg);
+}
+
+#la-palette-du-gout
+{
+    background-image: url(../../images/palette.jpg);
+}
+
+#le-delice-des-sens
+{
+    background-image: url(../../images/delice.jpg);
+}
+
 .img-menu
 {
-
-    background-image: url(../../images/francaise.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw; /*99.1vw sur pc pourquoi ???*/
@@ -390,7 +399,6 @@ p
 
         h1
         {
-            font-size: $font-size1;
             grid-column: 1;
             grid-row: 1;
             text-align: center;
@@ -404,6 +412,8 @@ p
         }
     }
 }
+
+
 
 /*.carte
 {

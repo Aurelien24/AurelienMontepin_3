@@ -18,17 +18,15 @@
 {
     padding-bottom: 14vw;
 
-    button
+    .button-color
     {
-        border-radius: 5vw;
-        height: 10vw;
         margin-top: 10vw;
     }
 }
 
 #fonctionnement
 {
-    padding-top: 14vw;
+    padding-top: 10vw;
 
     h2
     {
@@ -112,11 +110,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-
-    div
-    {
-        margin: 0px 5.5vw 0px 5.5vw;
-    }
+    align-items: center;
 
     .green
     {
@@ -124,13 +118,14 @@
         width: 12vw;
         height: 1vw;
         margin-bottom: 3vw;
+        margin-right: 80vw;
     }
 
     h2
     {
-        font-size: $font-size2;
         font-weight: normal;
         margin-bottom: 1vw;
+        width: 87vw;
     }
 
     .food
@@ -157,7 +152,6 @@
 
         h3
         {
-            font-size: $font-size3;
             margin-bottom: 0px;
             margin-top: 2.5vw;
             grid-column: 1;
@@ -169,8 +163,8 @@
             display: flex;
             justify-content: space-between;
             padding: 0px;
-            font-size: $font-size3;
             margin-top: 0.5vw;
+            margin-right: 3vw;
 
             grid-column: 1;
             grid-row: 2;
@@ -189,7 +183,6 @@
             height: 100%;
             width: 100%;
             border-radius: 0vw 3vw 3vw 0vw;
-            margin-right: -3vw;
             text-align: center;
 
             i
@@ -210,42 +203,14 @@
         }
     }
 
-    button
+    .button-color
     {
-        border-radius: 6vw;
-        height: 12vw;
-
-        margin-top: 7vw;
-        margin-bottom: 13vw;
-
-        padding: 0vw 8vw 0vw 8vw;
-    }
-}
-
-.button-zone
-{
-
-    background-color: $color2;
-    display: flex;
-    justify-content: space-around;
-    height: 25vw;
-    width: 100vw;
-
-    button
-    {
-        border-radius: 5vw;
-        height: 10vw;
-        padding: 0vw 8vw 0vw 8vw;
+        margin: 7vw 0vw 10vw 0vw;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1071px)
 {
-
-    #top-text
-    {
-        padding-bottom: 14vw;
-    }
 
     #fonctionnement
     {
@@ -293,164 +258,37 @@
         } 
     }
 
-
-    /*Pour fusion*/
-
-    .img-menu
-    {
-        height: 70vw;        
-
-        div
-        {
-            border-radius: 10vw 10vw 0vw 0vw;
-            padding: 0vw 10vw 0vw 10vw;
-            grid-template-columns: 75vw 10vw;
-        }
-    }
-
     /* Faire une classe pour le menu d'arrivé lancer un transphorm */
 
     .carte
     {
-        background-color: $color2;
-        padding: 0px 23vw 0px 23vw;
-        display: flex;
-        flex-direction: column;
-
-        .zone
-        {           
-
-
-            .green
-            {
-                background-color: $color5;
-                width: 12vw;
-                height: 1vw;
-                margin-bottom: 3vw;
-            }
-    
-            h2
-            {
-                font-size: $font-size2;
-                font-weight: normal;
-                margin-bottom: 1vw;
-            }
-    
-            .food
-            {
-                background-color: white;
-                border-radius: 3vw;
-                padding: 0vw 3vw 0vw 3vw;
-
-                overflow: hidden;
-    
-                display: grid;
-                grid-template-columns: 55.5vw 10vw;
-                grid-template-rows: 8vw 8vw;
-                width: 54vw;
-    
-                transition-property: grid-template-columns;
-                transition-duration: 1000ms;
-    
-                opacity: 1;
-                margin: 3vw 0vw 3vw 0vw;
-                animation-name: food;
-    
-    
-                h3
-                {
-                    font-size: $font-size3;
-                    margin-bottom: 0px;
-                    margin-top: 2.5vw;
-                    grid-column: 1;
-                    grid-row: 1;
-                }
-    
-                .contenu
-                {
-                    display: flex;
-                    justify-content: space-between;
-                    padding: 0px;
-                    font-size: $font-size3;
-                    margin-top: 0.5vw;
-    
-                    grid-column: 1;
-                    grid-row: 2;
-                }
-    
-                .check
-                {
-                    grid-column: 2;
-                    grid-row: 1/3;
-                    
-                    background-color: $color5;
-    
-                    justify-self: center;
-                    align-self: center;
-    
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 0vw 3vw 3vw 0vw;
-                    margin-right: -3vw;
-                    text-align: center;
-    
-                    i
-                    {
-                        font-size: 6vw;
-                        margin-top: 5vw;
-                        color: white;
-                    }
-                }
-    
-                &:hover
-                {
-                    grid-template-columns: 45.4vw 14.5vw;
-    
-                    i
-                    {
-                        transform: rotate(-360deg);
-                    }
-                }
-            }
-        }
-    }
-
-    .button-zone
-    {
-
-        background-color: $color2;
-        display: flex;
-        justify-content: space-around;
-        height: min-content;
-        padding-top: 8vw;
-
-        button
+        .green
         {
-            
-            border-radius: 6vw;
-            height: 12vw;
-
-            margin-top: 7vw;
-            margin-bottom: 13vw;
-
-            padding: 0vw 8vw 0vw 8vw;
+            width: 10vw;
+            margin-right: 56vw;
         }
-    }
 
-    .button-zone
-    {
-
-        background-color: $color2;
-        display: flex;
-        justify-content: space-around;
-        height: 8vw;
-        width: 85vw;
-
-        button
+        h2
         {
-            border-radius: 2vw;
-            height: 5vw;
-            padding: 0vw 8vw 0vw 8vw;
+            width: 66vw;
+        }
+
+        .food
+        {
+
+            grid-template-columns: 63vw 10vw;
+            grid-template-rows: 7vw 7vw;
+            width: 60vw;
+
+            .check > i
+            {
+                margin-top: 4vw;
+            }
+
+            &:hover
+            {
+                grid-template-columns: 53vw 10vw;
+            }
         }
     }
 }
@@ -471,14 +309,7 @@
 
     #top-text
     {
-        padding-bottom: 14vw;
         width: 100vw;
-
-        button
-        {
-            border-radius: 5vw;
-            height: 10vw;
-        }
     }
 
     #fonctionnement
@@ -548,7 +379,6 @@
 
         div
         {
-            border-radius: 5vw 5vw 0vw 0vw;
             grid-template-columns: 75vw 10vw;
             width: 85vw;
         }
@@ -558,135 +388,41 @@
 
     .carte
     {
-        background-color: $color2;
-        padding: 0px 5.5vw 0px 5.5vw;
-        display: flex;
-        justify-content: space-between;
-        width: 74vw;
+        .green
+        {
+            width: 10vw;
+            margin-right: 43vw;
+        }
 
-        div
+        h2
+        {
+            width: 53vw;
+        }
+
+        .food
         {
 
-            display: flex;
-            flex-direction: column;
+            grid-template-columns: 53vw 10vw;
+            grid-template-rows: 5vw 5vw;
+            width: 50vw;
             
 
-            h2
+            .check
             {
-                font-size: $font-size2;
-                font-weight: normal;
-                margin-bottom: 1vw;
+                margin-right: -1.5vw;
                 text-align: center;
+
+                i
+                {
+                    font-size: 4vw;
+                    margin-top: 3vw;
+                }
             }
 
-            .green
+            &:hover
             {
-                background-color: $color5;
-                width: 12vw;
-                height: 1vw;
-                margin-bottom: 3vw;
-                align-self: center;
+                grid-template-columns: 43vw 10vw;
             }
-
-            .food
-            {
-                background-color: white;
-                border-radius: 1.5vw;
-                padding: 0vw 1vw 0vw 1vw;
-                
-
-                overflow: hidden;
-    
-                display: grid;
-                grid-template-columns: 24vw 0vw;
-                grid-template-rows: 4vw 4vw;
-    
-                transition-property: grid-template-columns;
-                transition-duration: 1000ms;
-    
-                opacity: 1;
-                margin: 1vw 0vw 1vw 0vw;
-                animation-name: food;
-    
-    
-                h3
-                {
-                    
-                    margin-bottom: 0px;
-                    margin-top: 0.5vw;
-                    grid-column: 1;
-                    grid-row: 1;
-                }
-    
-                .contenu
-                {
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: row;
-                    padding: 0px;
-                    font-size: $font-size3;
-                    margin-top: 0.5vw;
-    
-                    grid-column: 1;
-                    grid-row: 2;
-    
-                    p
-                    {
-                        margin: 0px;
-                    }
-                }
-    
-                .check
-                {
-                    grid-column: 2;
-                    grid-row: 1/3;
-                    
-                    background-color: $color5;
-    
-                    justify-self: center;
-                    align-self: center;
-    
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 0vw 1.5vw 1.5vw 0vw;
-                    margin-right: -3vw;
-                    text-align: center;
-    
-                    i
-                    {
-                        font-size: 3vw;
-                        margin-top: 2.5vw;
-                    }
-                }
-    
-                &:hover
-                {
-                    /*Faire avec la largeur, bug sur chrome*/
-                    grid-template-columns: 19vw 5vw;
-    
-                    i
-                    {
-                        transform: rotate(-360deg);
-                    }
-                }
-            }
-        }
-    }
-
-    .button-zone
-    {
-
-        background-color: $color2;
-        display: flex;
-        justify-content: space-around;
-        height: 8vw;
-        width: 85vw;
-
-        button
-        {
-            border-radius: 2vw;
-            height: 5vw;
-            padding: 0vw 8vw 0vw 8vw;
         }
     }
 }
