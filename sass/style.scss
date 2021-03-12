@@ -102,6 +102,28 @@
     }
 }
 
+#a-la-francaise
+{
+    background-image: url(../../images/francaise.jpg);
+    background-position: 50% 215%;
+}
+
+#la-note-enchantee
+{
+    background-image: url(../../images/enchantee.jpg);
+    background-position: 100% 50%;
+}
+
+#la-palette-du-gout
+{
+    background-image: url(../../images/palette.jpg);
+}
+
+#le-delice-des-sens
+{
+    background-image: url(../../images/delice.jpg);
+}
+
 /* Faire une classe pour le menu d'arrivé lancer un transphorm */
 
 .carte
@@ -128,7 +150,7 @@
         width: 87vw;
     }
 
-    .food
+    /*.food
     {
         background-color: white;
         border-radius: 3vw;
@@ -142,7 +164,9 @@
         grid-template-columns: 84.5vw 14.5vw;
         grid-template-rows: 8vw 8vw;
 
-        transition-property: grid-template-columns;
+        transform: scale(1, 1);
+
+        transition-property: transform(scale), width;
         transition-duration: 1000ms;
 
         opacity: 1;
@@ -194,11 +218,103 @@
 
         &:hover
         {
-            grid-template-columns: 70vw 14.5vw;
+            transform: scale(0.5, 1);
+            width: 163vw;
 
             i
             {
                 transform: rotate(-360deg);
+            }
+        }
+    }*/
+
+    .food
+    {
+        background-color: white;
+        border-radius: 3vw;
+        padding: 0vw 0vw 0vw 3vw;
+        
+
+        width: 81.5vw;
+        
+        text-overflow: ellipsis;
+
+        display: flex;
+        flex-wrap: nowrap;
+
+        /*grid-template-columns: 84.5vw 14.5vw;
+        grid-template-rows: 8vw 8vw;*/
+
+        transform: scale(1, 1);
+
+        transition-property: transform(scale), width;
+        transition-duration: 1000ms;
+
+        opacity: 1;
+        margin: 3vw 0vw 3vw 0vw;
+        animation-name: food;
+
+
+        h3
+        {
+            margin-bottom: 0px;
+            margin-top: 2.5vw;
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .contenu
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 0px;
+            margin-right: 3vw;
+
+            width: 81.5vw;
+
+            .description
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .check
+        {
+            
+            background-color: $color5;
+
+            height: 15vw;
+            width: 0vw;
+            border-radius: 0vw 3vw 3vw 0vw;
+            text-align: center;
+
+            overflow: hidden;
+
+            transition-property: width;
+            transition-duration: 1000ms;
+
+            margin : 0px;
+
+            i
+            {
+                font-size: 6vw;
+                margin-top: 5vw;
+            }
+        }
+
+        &:hover
+        {
+            .check
+            {
+                width: 15vw;
+                
+                i
+                {
+                    transform: rotate(-360deg);
+                }
             }
         }
     }
@@ -373,7 +489,6 @@
 
     .img-menu
     {
-        background-position: 50% 215%;
         height: 55vw;
         align-items: center;
 
@@ -383,6 +498,27 @@
             width: 85vw;
         }
     }
+
+    #a-la-francaise
+    {
+        background-position: 50% 210%;
+    }
+
+    #la-note-enchantee
+    {
+        background-position: 100% 15%;
+    }
+
+    #la-palette-du-gout
+    {
+        background-position: 100% 115%;
+    }
+
+    #le-delice-des-sens
+    {
+        background-position: 100% 180%;
+    }
+
 
     /* Faire une classe pour le menu d'arrivé lancer un transphorm */
 
