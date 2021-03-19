@@ -1,29 +1,71 @@
 header
+{
+    height: 14vw;
+
+    @include display-center;
+
+    img
     {
-        height: 14vw;
+        height: 7vw;
+    }
+}
 
-        @include display-center;
-
+@media screen and (min-width: 769px) and (max-width: 1071px)
+{
+    header
+    {
+        height: 10vw;
+    
         img
         {
-            height: 7vw;
+            height: 6vw;
         }
     }
+}
+
+@media screen and (min-width: 1072px)
+{
+    header
+    {
+        height: 8vw;
+    
+        img
+        {
+            height: 5vw;
+        }
+    }
+}
 
 footer
 /* logo */
+{
+    background-color: $color6;
+    width: 100%;
+
+    p
     {
-        background-color: $color6;
-        width: 100vw;
+        /*a suppr   a l'avenir*/
+        margin: 10vw;
 
-        p
+        a
         {
-            /*a suppr   a l'avenir*/
-            margin: 10vw;
-
-            a
-            {
-                color: white;
-            }
+            color: white;
         }
     }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1071px)
+{
+    footer > p
+    {
+        margin: 8vw;
+    }
+}
+
+@media screen and (min-width: 1072px)
+{
+    footer > p
+    {
+        margin: 5vw;
+    }
+}
