@@ -16,7 +16,12 @@
 
 #top-text
 {
-    padding-bottom: 14vw;
+    padding-bottom: 4vw;
+
+    h3
+    {
+        font-weight: normal;
+    }
 
     .button-color
     {
@@ -27,6 +32,7 @@
 #fonctionnement
 {
     padding-top: 10vw;
+    padding-bottom: 7vw;
 
     h2
     {
@@ -50,8 +56,15 @@
             width: calc(4.3vw + 1vw);
             margin-left: calc((-4.3vw - 1vw) / 2);
         }
+
+        .fa-list-ul, .fa-store
+        {
+            scale: 0.8 1;
+            margin-right: -0.2vw;
+        }
     }
 }
+
 
 #restaurants
 {
@@ -66,6 +79,11 @@
     div
     {
         margin-bottom: 5vw;
+
+        a
+        {
+            width: min-content;
+        }
 
         a > article
         {
@@ -82,6 +100,10 @@
             }
 
         /* Ancienne place pour un h2 et .text*/
+            h3, .text
+            {
+                background-color: lightcyan;
+            }
         
         }     
     }
@@ -99,6 +121,13 @@
         border-radius: 6.5vw 6.5vw 0vw 0vw;
         padding: 0vw 10% 0vw 10%;
         grid-template-columns: 75vw 10vw;
+
+        h1
+        {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }
 
@@ -117,6 +146,7 @@
 #la-palette-du-gout
 {
     background-image: url(../../images/palette.jpg);
+    background-position: 100% 145%;
 }
 
 #le-delice-des-sens
@@ -189,22 +219,18 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            padding: 0px;
-            margin-right: 3vw;
+            padding: 0px 5% 0vw 0vw;
 
             width: 100%;
 
             transition-property: width;
             transition-duration: 1000ms;
 
-            div
+            div > h3, p:first-child
             {
-                h3, p
-                {
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             .description
@@ -244,7 +270,7 @@
 
             .contenu
             {
-                width: 80%;
+                width: 75%;
             }
             .check
             {
@@ -352,7 +378,7 @@
 {
     #top-recherche
     {
-        height: 5vw;
+        height: 5.5vw;
         width: 100vw;
 
         #recherche
@@ -377,6 +403,7 @@
     #fonctionnement
     {
         padding-top: 5vw;
+        padding-bottom: 5vw;
 
         h2
         {
@@ -398,13 +425,18 @@
                 height: 6vw;
                 margin-top: 3vw;
                 grid-template-columns: auto auto 80%;
+
+                p
+                {
+                    width: 18vw;
+                }
     
                 .button-grey-div
                 {
                     /*Seras calculé avec la taille de police. Pas de var en calc ?*/
-                    height: calc(4.3vw + 1vw);
-                    width: calc(4.3vw + 1vw);
-                    margin-left: calc((-4.3vw - 1vw) / 2);
+                    height: calc(12px + 2vw);
+                    width: calc(12px + 2vw);
+                    margin-left: calc((-12px - 2vw) / 2);
                 }
             }
         }
@@ -422,6 +454,9 @@
             grid-template-columns: 15vw 6vw ;
             grid-template-rows: 4vw 8vw 3vw 3vw;
 
+            width: 44.5vw;
+            height: 18vw;
+
             img
             {
                 width: 44.5vw;
@@ -435,7 +470,7 @@
 
     .img-menu
     {
-        height: 45vw;
+        height: 30vw;
         align-items: center;
         width: 100%;
 
@@ -443,13 +478,15 @@
         {
             grid-template-columns: 75vw 10vw;
             width: 80%;
-            border-radius: 5vw 5vw 0vw 0vw;
+            border-radius: 3vw 3vw 0vw 0vw;
+            padding-top: 2vw;
+            padding-bottom: 2vw;
         }
     }
 
     #a-la-francaise
     {
-        background-position: 50% 210%;
+        background-position: 50% 70%;
     }
 
     #la-note-enchantee
@@ -459,7 +496,7 @@
 
     #la-palette-du-gout
     {
-        background-position: 100% 115%;
+        background-position: 100% 80%;
     }
 
     #le-delice-des-sens
@@ -478,7 +515,8 @@
         .green
         {
             width: 10vw;
-            margin-right: 13vw;
+            margin-right: 15vw;
+            height: 0.5vw;
         }
 
         h2
@@ -486,173 +524,63 @@
             width: 23vw;
         }
 
+        .entrees
+        {
+            margin-left: 3vw;
+
+        }
+
+        .dessert
+        {
+            margin-right: 3vw;
+        }
+
         .food
         {
-            width: 20vw;
+            width: 25vw;
             height: 7vw;
+
+            h3
+            {
+                margin-top: 10px;
+            }
 
             .contenu
             {
-                width: 100%;
+                width: 95%;
             }
             
             .check
             {
-                margin-right: -1.5vw;
                 text-align: center;
                 width: 0%;
 
                 i
                 {
-                    font-size: 4vw;
-                    margin-top: 3vw;
+                    font-size: 3.5vw;
+                    margin-top: 1.75vw;
                 }
             }
+
+            
 
             &:hover
             {
                 .contenu
                 {
-                    width: 50%;
+                    width: 70%;
                 }
                 .check
                 {
-                    width: 40%;
+                    width: 30%;
                 }
             }
         }
     }
 
-    /*pour comparer et débug
-
-    .carte
-{
-    background-color: $color2;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .green
+    .button-color
     {
-        background-color: $color5;
-        width: 12vw;
-        height: 1vw;
-        margin-bottom: 3vw;
-        margin-right: 80vw;
+        height: 5vw;
+        margin: 3vw 0vw 6vw 0vw
     }
-
-    h2
-    {
-        font-weight: normal;
-        margin-bottom: 1vw;
-        width: 87vw;
-    }
-
-    .food
-    {
-        background-color: white;
-        border-radius: 3vw;
-        padding: 0vw 0vw 0vw 3vw;
-        
-
-        width: 81.5vw;
-        
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-        display: flex;
-        flex-wrap: nowrap;
-
-        /*grid-template-columns: 84.5vw 14.5vw;
-        grid-template-rows: 8vw 8vw;*//*
-
-        transition-property: width;
-        transition-duration: 1000ms;
-
-        opacity: 1;
-        margin: 3vw 0vw 3vw 0vw;
-        animation-name: food;
- 
-
-        h3
-        {
-            margin-bottom: 0px;
-            margin-top: 2.5vw;
-            grid-column: 1;
-            grid-row: 1;
-        }
-
-        .contenu
-        {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            padding: 0px;
-            margin-right: 3vw;
-
-            text-overflow: ellipsis;
-
-            width: 81.5vw;
-
-            div
-            {
-                h3
-                {
-                    text-overflow: ellipsis;
-                }
-                
-                p
-                {
-                    text-overflow: ellipsis;
-                }
-            }
-
-            .description
-            {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                text-overflow: ellipsis;
-            }
-        }
-
-        .check
-        {
-            
-            background-color: $color5;
-
-            height: 15vw;
-            width: 0vw;
-            border-radius: 0vw 3vw 3vw 0vw;
-            text-align: center;
-
-            overflow: hidden;
-
-            transition-property: width;
-            transition-duration: 1000ms;
-
-            margin : 0px;
-
-            i
-            {
-                font-size: 6vw;
-                margin-top: 5vw;
-            }
-        }
-
-        &:hover
-        {
-            .check
-            {
-                width: 15vw;
-
-                i
-                {
-                    transform: rotate(-360deg);
-                }
-            }
-        }
-    }
-}*/
 }

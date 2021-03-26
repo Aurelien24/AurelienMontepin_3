@@ -28,34 +28,41 @@ p, h2, h3, h4, h5, h6
 
 .fa-heart, i, h1
 {
-    font-size: 7vw;
+    font-size: calc(10px + 5.5vw);
 }
 
 #top-recherche, h2, .text, button, #top-text > p
 {
-    font-size: 5.2vw;
+    font-size: calc(6px + 4vw);
 }
 
 #recherche, .new, footer > p, footer > p > i, h3, .contenu
 {
-    font-size: 4.3vw;
+    font-size: calc(5px + 3vw);
+}
+
+.fa-hands-helping
+{
+    scale: 0.7 1;
+    width: 2.3vw;
+    margin-left: -0.2vw;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1071px)
 {
     .fa-heart, i, h1
     {
-        font-size: 6.5vw;
+        font-size: calc(15px + 4vw);
     }
     
     #top-recherche, h2, .text,  button, #top-text > p
     {
-        font-size: 3.6vw;
+        font-size: calc(10px + 3vw);
     }
     
     #recherche, .new, footer > p, footer > p > a > i, h3, .contenu
     {
-        font-size: 3vw;
+        font-size: calc(5px + 2vw);
     }
 }
 
@@ -63,17 +70,27 @@ p, h2, h3, h4, h5, h6
 {
     .fa-heart, i, h1
     {
-        font-size: 5.5vw;
+        font-size: calc(20px + 2vw);
+    }
+
+    h2
+    {
+        font-size: calc(15px + 1.5vw);
+    }
+
+    h3, .top-recherche > i, #recherche
+    {
+        font-size: calc(12px + 1.2vw);
     }
     
-    #top-recherche, h2, .text, button, #top-text > p
+    #top-recherche, .text, button, #top-text > p
     {
-        font-size: 3.5vw;
+        font-size: calc(10px + 1vw);
     }
     
-    #recherche, .new, footer > p, footer > p > i, h3, .contenu
+    .new, footer > p, .contenu, .fa-hands-helping, .fa-utensils
     {
-        font-size: 2.5vw;
+        font-size: calc(5px + 1vw);
     }
 }
 
