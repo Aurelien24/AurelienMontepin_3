@@ -36,7 +36,7 @@ p, h2, h3, h4, h5, h6
     font-size: calc(6px + 4vw);
 }
 
-#recherche, .new, footer > p, footer > p > i, h3, .contenu
+#recherche, .new, footer > p, footer > p > a > i, h3, .contenu
 {
     font-size: calc(5px + 3vw);
 }
@@ -44,7 +44,6 @@ p, h2, h3, h4, h5, h6
 .fa-hands-helping
 {
     scale: 0.7 1;
-    width: 2.3vw;
     margin-left: -0.2vw;
 }
 
@@ -100,18 +99,6 @@ p, h2, h3, h4, h5, h6
 {
     align-self: center;
     justify-self: center;
-
-    &.fas
-    {
-        opacity: 0;
-        transition-property: opacity;
-        transition-duration: 1000ms;
-            
-        &:hover
-        {
-            opacity: 1;
-        }
-    }
 }
 
 @keyframes food{
@@ -410,7 +397,6 @@ p
         {
             grid-column: 2;
             grid-row: 1;
-            color: $color3;
         }
     }
 }

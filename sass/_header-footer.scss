@@ -54,6 +54,11 @@ footer
     }
 }
 
+.fa-hands-helping, .fa-utensils
+{
+    width: 3vw;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1071px)
 {
     footer > p
@@ -67,5 +72,10 @@ footer
     footer > p
     {
         margin: 5vw;
+    }
+
+    .fa-hands-helping, .fa-utensils
+    {
+        width: 1.3vw;
     }
 }

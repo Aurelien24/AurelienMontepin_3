@@ -52,9 +52,15 @@
         .button-grey-div
         {                
             /*Seras calculé avec la taille de police. Pas de var en calc ?*/
-            height: calc(4.3vw + 1vw);
-            width: calc(4.3vw + 1vw);
-            margin-left: calc((-4.3vw - 1vw) / 2);
+            height: calc(5.3vw + 4px);
+            width: calc(5.3vw + 4px);
+            margin-left: calc((-5.3vw - 4px) / 2);
+            display: flex;
+
+            p
+            {
+                margin: auto;
+            }
         }
 
         .fa-list-ul, .fa-store
@@ -82,30 +88,118 @@
 
         a
         {
-            width: min-content;
-        }
-
-        a > article
-        {
-        grid-template-columns: 65vw 24vw ;
-        grid-template-rows: 15vw 32vw 10vw 10vw;
-        border-radius: 3.5vw;
-        margin-top: 5vw;
-
-            img
+            .mon-image 
             {
+                border-radius: 3.5vw 3.5vw 0vw 0vw;
+
                 width: 89vw;
                 height: 47vw;
-                border-radius: 3.5vw 3.5vw 0vw 0vw;
+                
+                margin-top: 5vw;
+                margin-bottom : 0vw;
+                display: flex;
+                flex-direction: column;
+
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                p
+                {
+                    background-color: $color4;
+                    color: green;
+                    margin-top: 2vw;
+                    margin-left: 67vw;
+                    text-align: center;
+                    height: 9vw;
+                    line-height: 9vw;
+                    width: 20vw;
+                }
             }
 
-        /* Ancienne place pour un h2 et .text*/
-            h3, .text
+            #la-palette-du-gout
             {
-                background-color: lightcyan;
+                background-position: 100% 105%;
             }
-        
-        }     
+
+            #la-note-enchantee
+            {
+                background-position: 100% 60%;
+            }
+
+            #a-la-francaise
+            {
+                background-position: 100% 90%;
+            }
+
+            #le-delice-des-sens
+            {
+                background-position: 100% 100%;
+            }
+
+            .titre
+            {
+                border-radius: 0vw 0vw 3.5vw 3.5vw;
+                background-color: white;
+                padding: 2vw;
+
+                display: flex;
+                justify-content: space-between;
+
+                margin: 3vw, 0vw, 3vw, 0vw;
+
+                div
+                {
+                    margin: 0vw;
+                    h3
+                    {
+                        margin: 0px;
+                    }
+                }
+
+                div
+                {
+                    display: grid;
+                    grid-template: 
+                        "a" auto;
+                    i
+                    {
+                        position: relative;
+                        left: 0vw;
+                        margin: auto;
+                        grid-area: a;
+                    }
+
+                    .far
+                    {
+                        opacity: 1;
+                        transition-property: opacity;
+                        transition-duration: 1000ms;
+                    }
+
+                    .fas
+                    {
+                        background: -webkit-linear-gradient(80deg, $color7, $color3);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        opacity: 0;
+                        transition-property: opacity;
+                        transition-duration: 1000ms;
+                            
+                        &:hover
+                        {
+                            opacity: 1;
+
+
+                            /*Ne fonctionne pas /!\ */
+                            ~ .far
+                            {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }  
     }
 }
 
@@ -325,27 +419,21 @@
         }
     }
 
-    #restaurants > div
+    #restaurants > div > a > .mon-image 
     {
+        width: 79vw;
+        height: 43vw; 
 
-        /* Sera peut etre a réarenger */
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
-
-        a > article
+        p
         {
-            grid-template-columns: 32.5vw 12vw ;
-            grid-template-rows: 7.5vw 16vw 5vw 5vw;
-
-            img
-            {
-                width: 44.5vw;
-                height: 23.5vw;
-            }
-        } 
+            margin-top: 2vw;
+            margin-left: 61vw;
+            height: 6vw;
+            line-height: 6vw;
+            width: 16vw;
+        }
     }
+
 
     /* Faire une classe pour le menu d'arrivé lancer un transphorm */
 
@@ -442,25 +530,25 @@
         }
     }
 
-    #restaurants > div /* cause un déborement ??? A fait appraitre la barre de défillement pc */
+    #restaurants > div
     {
         display: flex;
         align-items: center;
         justify-content: space-around;
         flex-wrap: wrap;
 
-        a > article
+        a > .mon-image
         {
-            grid-template-columns: 15vw 6vw ;
-            grid-template-rows: 4vw 8vw 3vw 3vw;
-
-            width: 44.5vw;
+            width: 40.5vw;
             height: 18vw;
 
-            img
+            p
             {
-                width: 44.5vw;
-                height: 23.5vw;
+                margin-top: 2vw;
+                margin-left: 28.5vw;
+                height: 4vw;
+                line-height: 4vw;
+                width: 10vw;
             }
         } 
     }
