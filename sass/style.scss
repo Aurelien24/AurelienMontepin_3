@@ -3,6 +3,7 @@
 @import "base.scss";
 
 
+
 #top-recherche{
     height: 11vw;
     width: 100vw;
@@ -17,6 +18,7 @@
 #top-text
 {
     padding-bottom: 4vw;
+    width: 100vw;
 
     h3
     {
@@ -41,32 +43,41 @@
 
     /* a revoir, une partie, (background..) dans base. Mettre classe spécifique ici et html */
 
-    div > .button-fonctionnement
+
+    div
     {
-
-        width: 84vw;
-        height: 12vw;
-        margin-top: 2vw;
-        grid-template-columns: 5vw 5vw 79vw;
-
-        .button-grey-div
-        {                
-            /*Seras calculé avec la taille de police. Pas de var en calc ?*/
-            height: calc(5.3vw + 4px);
-            width: calc(5.3vw + 4px);
-            margin-left: calc((-5.3vw - 4px) / 2);
-            display: flex;
-
-            p
+        .button-fonctionnement
+        {
+    
+            width: 84vw;
+            height: 12vw;
+            margin-top: 2vw;
+            grid-template-columns: 5vw 5vw 79vw;
+    
+            .button-grey-div
+            {                
+                /*Seras calculé avec la taille de police. Pas de var en calc ?*/
+                height: calc(5.3vw + 4px);
+                width: calc(5.3vw + 4px);
+                margin-left: calc((-5.3vw - 4px) / 2);
+                display: flex;
+    
+                p
+                {
+                    margin: auto;
+                }
+            }
+    
+            .fa-list-ul, .fa-store
             {
-                margin: auto;
+                scale: 0.8 1;
+                margin-right: -0.2vw;
             }
         }
 
-        .fa-list-ul, .fa-store
+        #degustation
         {
-            scale: 0.8 1;
-            margin-right: -0.2vw;
+            background-color: $color8;
         }
     }
 }
@@ -88,6 +99,13 @@
 
         a
         {
+            box-shadow: 0px 0px 1vw #bfbfbf;
+            width: 89vw;
+            height: 47vw;
+
+            margin-top: 5vw;
+            border-radius: 3.5vw;
+
             .mon-image 
             {
                 border-radius: 3.5vw 3.5vw 0vw 0vw;
@@ -95,7 +113,6 @@
                 width: 89vw;
                 height: 47vw;
                 
-                margin-top: 5vw;
                 margin-bottom : 0vw;
                 display: flex;
                 flex-direction: column;
@@ -118,7 +135,7 @@
 
             #la-palette-du-gout
             {
-                background-position: 100% 105%;
+                background-position: 100% 100%;
             }
 
             #la-note-enchantee
@@ -184,17 +201,18 @@
                         opacity: 0;
                         transition-property: opacity;
                         transition-duration: 1000ms;
-                            
-                        &:hover
+                    }
+
+                    &:hover
+                    {
+                        .far
+                        {
+                            opacity: 0;
+                        }
+                        
+                        .fas
                         {
                             opacity: 1;
-
-
-                            /*Ne fonctionne pas /!\ */
-                            ~ .far
-                            {
-                                opacity: 0;
-                            }
                         }
                     }
                 }
@@ -478,7 +496,7 @@
 
     #top-text
     {
-        width: 100vw;
+        
         padding-bottom: 5vw;
 
         .button-color
@@ -537,20 +555,32 @@
         justify-content: space-around;
         flex-wrap: wrap;
 
-        a > .mon-image
+        a
         {
             width: 40.5vw;
-            height: 18vw;
+            height: 26vw;
+            margin-top: 8vw;
 
-            p
+            .mon-image
             {
-                margin-top: 2vw;
-                margin-left: 28.5vw;
-                height: 4vw;
-                line-height: 4vw;
-                width: 10vw;
+                width: 40.5vw;
+                height: 18vw;
+    
+                p
+                {
+                    margin-top: 2vw;
+                    margin-left: 28.5vw;
+                    height: 4vw;
+                    line-height: 4vw;
+                    width: 10vw;
+                }
             }
-        } 
+
+            .titre
+            {
+                height: 4vw;
+            }
+        }
     }
 
 

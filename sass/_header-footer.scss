@@ -39,13 +39,18 @@ header
 footer
 /* logo */
 {
+    
     background-color: $color6;
     width: 100%;
 
+    h3
+    {
+        margin: 10vw 10vw 5vw 10vw;
+    }
+
     p
     {
-        /*a suppr   a l'avenir*/
-        margin: 10vw;
+        margin: 5vw 10vw 10vw 10vw;
 
         a
         {
@@ -61,17 +66,33 @@ footer
 
 @media screen and (min-width: 769px) and (max-width: 1071px)
 {
-    footer > p
+    footer
     {
-        margin: 8vw;
+        h3
+        {
+            margin: 8vw 8vw 4vw 8vw;
+        }
+
+        p
+        {
+            margin: 4vw 8vw 8vw 8vw;
+        }
     }
 }
 
 @media screen and (min-width: 1072px)
 {
-    footer > p
+    footer
     {
-        margin: 5vw;
+        h3
+        {
+            margin: 5vw 5vw 2.5vw 5vw;
+        }
+
+        p
+        {
+            margin: 2.5vw 5vw 5vw 5vw;
+        }
     }
 
     .fa-hands-helping, .fa-utensils
