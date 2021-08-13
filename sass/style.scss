@@ -2,10 +2,103 @@
 @import "header-footer.scss";
 @import "base.scss";
 
+#spiner {
 
+    height: 0vh;
+    width: 0vw;
+    background-color: $color10;
+    position: fixed;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Masque les font awsome
+    z-index: 2;
+
+    animation: vanish 2100ms;
+
+    div {
+        height: 80px;
+        width: 80px;
+        border-radius: 40px;
+
+        display: block;
+
+        animation: turn 2000ms;
+
+        div {
+            height: 0px;
+            width: 0px;
+            border: none;
+            border-radius: 5px;
+            background-color: $color3;
+            animation: vanishPoint 2100ms;
+        }
+
+        #n1 {
+            margin: -5px 34px 10px 34px;
+        }
+
+        #n2 {
+            margin: 0px 0px 0px 0px;
+        }
+
+        #n3 {
+            margin: -10px 0px 35px 69.282px;
+        }
+
+        #n4 {
+            margin: 0px 0px 0px 0px;
+        }
+
+        #n5 {
+            margin: -10px 0px 7.5px 69.282px;
+        }
+
+        #n6 {
+            margin: 0px 34px 0px 34px;
+        }
+    }
+
+    &:active{
+        display: none;
+    }
+}
+
+@keyframes turn{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes vanish{
+    0%{
+        height: 100vh;
+        width: 100vw;
+    }
+    100%{
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+@keyframes vanishPoint{
+    0%{
+        height: 10px;
+        width: 10px;
+    }
+    100%{
+        height: 10px;
+        width: 10px;
+    }
+}
 
 #top-recherche{
-    height: 11vw;
+    height: 11vw; 
     width: 100vw;
 
     #recherche
@@ -20,14 +113,9 @@
     padding-bottom: 4vw;
     width: 100vw;
 
-    h3
+    h2
     {
         font-weight: normal;
-    }
-
-    .button-color
-    {
-        margin-top: 10vw;
     }
 }
 
@@ -56,21 +144,15 @@
     
             .button-grey-div
             {                
-                /*Seras calculé avec la taille de police. Pas de var en calc ?*/
                 height: calc(5.3vw + 4px);
                 width: calc(5.3vw + 4px);
                 margin-left: calc((-5.3vw - 4px) / 2);
                 display: flex;
-    
-                p
-                {
-                    margin: auto;
-                }
             }
     
             .fa-list-ul, .fa-store
             {
-                scale: 0.8 1;
+                transform: scale(0.8, 1);
                 margin-right: -0.2vw;
             }
         }
@@ -95,10 +177,16 @@
     
     div
     {
+        @include display-center;
+        flex-direction: column;
+
         margin-bottom: 5vw;
 
         a
         {
+            @include display-center;
+            flex-direction: column;
+
             box-shadow: 0px 0px 1vw #bfbfbf;
             width: 89vw;
             height: 47vw;
@@ -110,12 +198,12 @@
             {
                 border-radius: 3.5vw 3.5vw 0vw 0vw;
 
-                width: 89vw;
+                width: 100%;
                 height: 47vw;
                 
                 margin-bottom : 0vw;
                 display: flex;
-                flex-direction: column;
+                justify-content: flex-start;
 
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -158,11 +246,13 @@
                 border-radius: 0vw 0vw 3.5vw 3.5vw;
                 background-color: white;
                 padding: 2vw;
+                width: calc(100% - 4vw);
 
                 display: flex;
                 justify-content: space-between;
+                flex-direction: row;
 
-                margin: 3vw, 0vw, 3vw, 0vw;
+                margin: 0vw;
 
                 div
                 {
@@ -186,35 +276,7 @@
                         grid-area: a;
                     }
 
-                    .far
-                    {
-                        opacity: 1;
-                        transition-property: opacity;
-                        transition-duration: 1000ms;
-                    }
-
-                    .fas
-                    {
-                        background: -webkit-linear-gradient(80deg, $color7, $color3);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        opacity: 0;
-                        transition-property: opacity;
-                        transition-duration: 1000ms;
-                    }
-
-                    &:hover
-                    {
-                        .far
-                        {
-                            opacity: 0;
-                        }
-                        
-                        .fas
-                        {
-                            opacity: 1;
-                        }
-                    }
+                    @include annimation-coeur;
                 }
             }
         }  
@@ -240,6 +302,8 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
+        @include annimation-coeur;
     }
 }
 
@@ -331,7 +395,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            padding: 0px 5% 0vw 0vw;
+            padding: 0px 5px 0vw 0vw;
 
             width: 100%;
 
@@ -360,7 +424,6 @@
 
             height: 15vw;
             width: 0%;
-            border-radius: 0vw 3vw 3vw 0vw;
             text-align: center;
 
             overflow: hidden;
@@ -382,11 +445,11 @@
 
             .contenu
             {
-                width: 75%;
+                width: calc(75% - 5px);
             }
             .check
             {
-                width: 20%;
+                width: 25%;
 
                 i
                 {
@@ -498,12 +561,6 @@
     {
         
         padding-bottom: 5vw;
-
-        .button-color
-        {
-            margin: 5vw 0vw 0vw 0vw;
-            height: 7vw;
-        }
     }
 
     #fonctionnement
@@ -526,16 +583,10 @@
             .button-fonctionnement
             {
                 width: 25vw;
-                max-width: 450px;
                 min-width: 20vw;
                 height: 6vw;
                 margin-top: 3vw;
                 grid-template-columns: auto auto 80%;
-
-                p
-                {
-                    width: 18vw;
-                }
     
                 .button-grey-div
                 {
@@ -554,6 +605,7 @@
         align-items: center;
         justify-content: space-around;
         flex-wrap: wrap;
+        flex-direction: row;
 
         a
         {
@@ -629,6 +681,7 @@
     {
         flex-direction: row;
         justify-content: space-around;
+        align-items: flex-start;
 
         .green
         {
@@ -686,7 +739,7 @@
             {
                 .contenu
                 {
-                    width: 70%;
+                    width: calc(70% - 5px);
                 }
                 .check
                 {
@@ -700,5 +753,276 @@
     {
         height: 5vw;
         margin: 3vw 0vw 6vw 0vw
+    }
+}
+
+@media screen and (min-width: 1400px)
+{
+
+    body {
+        background-color: $color9;
+    }
+
+    header {
+        width: 1300px;
+        background-color: $color10;
+    }
+
+    #top-recherche
+    {
+        height: 70px;
+        width: 1300px;
+
+        #recherche
+        {
+            height: 60px;
+            margin-left: 28px;
+        }
+    }
+
+    #top-text
+    {
+        
+        padding-bottom: 60px;
+        width: 1300px;
+        
+    }
+
+    #fonctionnement
+    {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        display: flex;
+        align-items: center;
+
+        width: 1300px;
+        background-color: $color10;
+
+        h2
+        {
+            width: 1200px;
+        }
+
+        div
+        {
+
+            display: flex;
+            justify-content: space-around;
+            width: 1200px;
+
+            .button-fonctionnement
+            {
+                min-width: 325px;
+                width: max-content;
+                height: 70px;
+                margin-top: 40px;
+                grid-template-columns: auto auto 80%;
+    
+                .button-grey-div
+                {
+                    height: 40px;
+                    width: 40px;
+                    margin-left: -20px;
+                }
+            }
+        }
+    }
+
+    #restaurants
+    {
+        display: flex;
+        align-items: center;
+        width: 1300px;
+        margin-top: 0px;
+        padding-top: 60px;
+
+        h2
+        {
+            width: 1200px;
+        }
+
+        div
+        {
+            display: flex;
+            align-items: center;
+            width: 1200px;
+            margin-bottom: 150px;
+    
+            a
+            {
+                width: 550px;
+                height: 300px;
+                margin-top: 100px;
+                border-radius: 50px;
+    
+                .mon-image
+                {
+                    width: 550px;
+                    height: 250px;
+                    border-radius: 50px 50px 0px 0px;
+        
+                    p
+                    {
+                        margin-top: 25px;
+                        margin-left: 395px;
+                        height: 40px;
+                        line-height: 40px;
+                        width: 130px;
+                    }
+                }
+    
+                .titre
+                {
+                    height: 50px;
+                    width: 500px;
+                    border-radius: 0px 0px 50px 50px;
+                    padding: 25px;
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    div:nth-child(1n)
+                    {
+                        width: 450px;
+                        justify-content: flex-start; 
+                    }
+
+                    div:nth-child(2n)
+                    {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    } 
+
+
+    /*Pour fusion*/
+
+    .img-menu
+    {
+        height: 500px;
+        align-items: center;
+        width: 1300px;
+
+        div
+        {
+            grid-template-columns: 975px 130px;
+            width: 1040px;
+            border-radius: 39px 39px 0vw 0vw;
+            padding-top: 26px;
+            padding-bottom: 26px;
+        }
+    }
+
+    #a-la-francaise
+    {
+        background-position: 50% 70%;
+    }
+
+    #la-note-enchantee
+    {
+        background-position: 100% 15%;
+    }
+
+    #la-palette-du-gout
+    {
+        background-position: 100% 80%;
+    }
+
+    #le-delice-des-sens
+    {
+        background-position: 100% 120%;
+    }
+
+
+    /* Faire une classe pour le menu d'arrivé lancer un transphorm */
+
+    .carte
+    {
+        width: 1300px;
+
+        .green
+        {
+            width: 200px;
+            margin-right: 150px;
+            height: 10px;
+        }
+
+        h2
+        {
+            width: 400px;
+        }
+
+        .entrees
+        {
+            margin-left: 3vw;
+
+        }
+
+        .dessert
+        {
+            margin-right: 3vw;
+        }
+
+        .food
+        {
+            width: 325px;
+            height: 100px;
+
+            border-radius: 48px;
+            padding: 0vw 0vw 0vw 30px;
+    
+            margin: 30px 0vw 30px 0vw;
+
+            h3
+            {
+                margin-top: 10px;
+            }
+
+            .contenu
+            {
+                width: 300px;
+                margin-right: 20px;
+            }
+            
+            .check
+            {
+                text-align: center;
+                width: 0px;
+
+                i
+                {
+                    font-size: 50px;
+                    margin-top: 25px;
+                }
+            }
+
+            
+
+            &:hover
+            {
+                .contenu
+                {
+                    width: 200px;
+                }
+                .check
+                {
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+    .button-zone, footer {
+        max-width: 1300px;
+    }
+
+    .button-color
+    {
+        margin: 60px 0vw 60px 0vw;
+        height: 90px;
+        min-width: 300px;
     }
 }

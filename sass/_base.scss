@@ -37,14 +37,14 @@ p, h1, h2, h3, h4, h5, h6
     font-size: calc(6px + 4vw);
 }
 
-#recherche, .new, footer > p, footer > p > a > i, h3, .contenu
+#recherche, .new, footer > p, footer > p > a > i, h3, .contenu, #slogan
 {
     font-size: calc(5px + 3vw);
 }
 
 .fa-hands-helping
 {
-    scale: 0.7 1;
+    transform: scale(0.7, 1);
     margin-left: -0.2vw;
 }
 
@@ -60,7 +60,7 @@ p, h1, h2, h3, h4, h5, h6
         font-size: calc(10px + 3vw);
     }
     
-    #recherche, .new, footer > p, footer > p > a > i, h3, .contenu
+    #recherche, .new, footer > p, footer > p > a > i, h3, .contenu, #slogan
     {
         font-size: calc(5px + 2vw);
     }
@@ -70,30 +70,57 @@ p, h1, h2, h3, h4, h5, h6
 {
     .fa-heart, i, h1
     {
-        font-size: calc(20px + 2vw);
+        font-size: calc(20px + 1.5vw);
     }
 
     h2
     {
-        font-size: calc(15px + 1.5vw);
+        font-size: calc(15px + 1.2vw);
     }
 
-    h3, .top-recherche > i, #recherche
+    h3, .top-recherche > i, #recherche, button, #slogan
     {
-        font-size: calc(12px + 1.2vw);
+        font-size: calc(12px + 1vw);
     }
     
-    #top-recherche, .text, button, #top-text > p
+    #top-recherche, .text, #top-text > p
     {
-        font-size: calc(10px + 1vw);
+        font-size: calc(10px + 0.8vw);
     }
     
     .new, footer > p, .contenu, .fa-hands-helping, .fa-utensils
     {
-        font-size: calc(5px + 1vw);
+        font-size: calc(5px + 0.8vw);
     }
 }
 
+@media screen and (min-width: 1400px)
+{
+    .fa-heart, i, h1
+    {
+        font-size: 24px;
+    }
+
+    h2
+    {
+        font-size: 22px;
+    }
+
+    h3, .top-recherche > i, #recherche, button, #slogan
+    {
+        font-size: 20px;
+    }
+    
+    #top-recherche, .text, #top-text > p
+    {
+        font-size: 18px;
+    }
+    
+    .new, footer > p, .contenu, .fa-hands-helping, .fa-utensils
+    {
+        font-size: 16px;
+    }
+}
 /* Annimation */
 
 .fa-heart
@@ -209,6 +236,8 @@ p
     opacity: 1;
     box-shadow: 1px 1px 5px 3px grey;
 
+    color: white;
+
     border-radius: 5vw;
     height: 10vw;
     padding: 0vw 4vw 0vw 4vw;
@@ -220,11 +249,6 @@ p
     {
         opacity: 0.90;
         box-shadow: 1px 1px 5px 3px black;
-    }
-    
-    p
-    {
-        color: white;
     }
 }
 
@@ -247,6 +271,11 @@ p
         display: grid;
         grid-template-rows: auto;
 
+        span
+        {
+            align-self: center;
+        }
+
         .button-grey-div
         {
             align-self: center;
@@ -254,20 +283,17 @@ p
             border-radius: 100%;
             background-color: $color3;
 
-            .number
+            color: white;
+
+            span
             {
-                color: white;
+                margin: auto;
             }
         }
 
         i
         {
             text-align: center;
-            align-self: center;
-        }
-
-        p
-        {
             align-self: center;
         }
     }

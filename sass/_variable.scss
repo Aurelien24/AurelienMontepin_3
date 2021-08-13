@@ -5,6 +5,42 @@
     justify-content: center;
 }
 
+@mixin annimation-coeur {
+    .far
+        {
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 1000ms;
+        }
+
+        .fas
+        {
+            background: linear-gradient(80deg, $color7, $color3);
+            background-clip: text; 
+            color: transparent;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 1000ms;
+
+            // Patch chrome
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &:hover
+        {
+            .far
+            {
+                opacity: 0;
+            }
+            
+            .fas
+            {
+                opacity: 1;
+            }
+        }
+}
+
 /*J'avais voulut mettre le font-seiz en variable mais les variables ne sont pas compatible avec les média query*/
 
 /*gris clair*/
@@ -23,3 +59,7 @@ $color6: #353535;
 $color7: #FF79DA;
 /*Banc-Rose Pale*/
 $color8: #F5EDFF;
+/*gris font body*/
+$color9: #E6E6E6;
+/*Blanx*/
+$color10: white;

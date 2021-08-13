@@ -3,16 +3,38 @@
 	<!-- Un head type utf-8 (Universal Character Set Transformation Format - 8 bits) -->
     <head>
         <meta charset="utf-8" />
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href=".public/css/style.css" />
         <title>OhMyFood</title>
     </head>
     <body>
         <header>
             <a href="#">
-                <img src="images/ohmyfood.png">
+                <img src="images/ohmyfood.png" alt="logo ohmyfood">
             </a>
         </header>
+        <div id="spiner">
+            <div>
+                <div id="n1">
+                
+                </div>
+                <div id="n2">
+                
+                </div>
+                <div id="n3">
+                
+                </div>
+                <div id="n4">
+                
+                </div>
+                <div id="n5">
+                
+                </div>
+                <div id="n6">
+                
+                </div>
+            </div>
+        </div>
         <div id="top">
             <div id="top-recherche">
                 <i class="fas fa-map-marker-alt"></i>
@@ -22,13 +44,11 @@
                 <h1>
                     Réservez le menu qui vous convient
                 </h1>
-                <h3>
+                <h2 id="slogan">
                     Découvrer des restorants d'exception, sélectionnées par nos soins.
-                </h3>
+                </h2>
                 <button type="button" class="button-color">
-                    <p>
                         Explorer nos restorants
-                    </p>
                 </button>
             </div>
         </div>
@@ -38,43 +58,42 @@
             </h2>
             <div>
                 <button type="button" class="button-fonctionnement">
-                    <!-- Mettre span a la place de div et p ? -> Chiffre absolut ou marge a gauche négative.  -->
-                    <div class="button-grey-div">
-                        <p class="number">
+                    <!-- Vérifier la compatibilité css  -->
+                    <span class="button-grey-div">
+                        <span>
                             1
-                        </p>
-                    </div>
+                        </span>
+                    </span>
                     <i class="fas fa-mobile-alt"></i>
-                    <p>
+                    <span>
                         Choisissez un restaurant
-                    </p>
+                    </span>
                 </button>
                 <button type="button" class="button-fonctionnement">
-                    <div class="button-grey-div">
-                        <p class="number">
+                    <span class="button-grey-div">
+                        <span>
                             2
-                        </p>
-                    </div>
+                        </span>
+                    </span>
                     <i class="fas fa-list-ul"></i>
-                    <p>
+                    <span>
                         Composez votre menu
-                    </p>
+                    </span>
                 </button>
                 <button type="button" id="degustation" class="button-fonctionnement">
-                    <div class="button-grey-div">
-                        <p class="number">
+                    <span class="button-grey-div">
+                        <span>
                             3
-                        </p>
-                    </div>
+                        </span>
+                    </span>
                     <i class="fas fa-store"></i>
-                    <p>
+                    <span>
                         Dégustez au restaurant
-                    </p>
+                    </span>
                 </button>
             </div>
         </div>
         <div id="restaurants">
-            <!-- <i class="fas fa-heart"></i> pour le coeur plein-->
             <h2>
                 Restaurants
             </h2>
@@ -92,8 +111,6 @@
                                 Ménilmontant
                             </p>
                         </div>
-                        <!-- Position absolut, relative ? Pour la supperposition -->
-                        <!-- Pas besoin de faire double et de faire replisement part css -->
                         <div>
                             <i class="far fa-heart"></i>
                             <i class="fas fa-heart"></i>
@@ -113,8 +130,6 @@
                                 Charonne
                             </p>
                         </div>
-                        <!-- Position absolut, relative ? Pour la supperposition -->
-                        <!-- Pas besoin de faire double et de faire replisement part css -->
                         <div>
                             <i class="far fa-heart"></i>
                             <i class="fas fa-heart"></i>
@@ -131,8 +146,6 @@
                                 Cité Rouge
                             </p>
                         </div>
-                        <!-- Position absolut, relative ? Pour la supperposition -->
-                        <!-- Pas besoin de faire double et de faire replisement part css -->
                         <div>
                             <i class="far fa-heart"></i>
                             <i class="fas fa-heart"></i>
@@ -149,8 +162,6 @@
                                 Folie-Méricourt
                             </p>
                         </div>
-                        <!-- Position absolut, relative ? Pour la supperposition -->
-                        <!-- Pas besoin de faire double et de faire replisement part css -->
                         <div>
                             <i class="far fa-heart"></i>
                             <i class="fas fa-heart"></i>
@@ -160,9 +171,9 @@
             </div>
         </div>
         <footer>
-            <h3 id="ohmyfood">
+            <h2 id="ohmyfood">
                 ohmyfood
-            </h3>
+            </h2>
             <p>
                 <a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a><br />
                 <a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a><br />
